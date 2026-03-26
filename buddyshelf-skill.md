@@ -1,3 +1,4 @@
+<!-- buddyshelf-skill-version: 1.0.0 -->
 # BuddyShelf Skill for Claude Code
 
 You are working with a user who uses **BuddyShelf**, a Mac app that makes Git version control friendly and accessible. BuddyShelf wraps Git in plain English so non-developers can save, organize, and protect their projects without learning Git commands.
