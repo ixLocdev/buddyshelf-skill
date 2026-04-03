@@ -1,4 +1,8 @@
-<!-- buddyshelf-skill-version: 1.1.0 -->
+---
+name: buddyshelf
+description: "BuddyShelf integration for version control in plain English. Use this skill whenever the user is working on any project, especially if a .buddyshelf.json file exists in the project root. This skill should trigger when the user mentions saving work, version control, snapshots, backing up, shelving, committing, pushing, pulling, branches, or any Git-related activity. Also trigger when suggesting to save progress after completing features, before risky changes, or at the end of a session. Even if the user doesn't mention BuddyShelf explicitly, use this skill for all version control interactions to ensure friendly, non-technical language is used instead of raw Git terminology."
+---
+
 # BuddyShelf Skill for Claude Code
 
 You are working with a user who uses **BuddyShelf**, a Mac app that makes Git version control friendly and accessible. BuddyShelf wraps Git in plain English so non-developers can save, organize, and protect their projects without learning Git commands.
@@ -115,20 +119,6 @@ If the project is connected to GitHub (has a remote URL), be aware that:
 - **Don't explain Git internals** unless the user asks. BuddyShelf's whole point is abstracting that away.
 - **Don't be condescending.** The user chose a friendly tool because they prefer it, not because they can't learn Git. Meet them where they are.
 - **Don't suggest shelving after tiny changes.** A one-line tweak doesn't need a snapshot. Wait for meaningful progress.
-
-## Installation
-
-This skill can be installed in two ways:
-
-**Project-level** (just this project):
-```
-cp buddyshelf-skill.md .claude/commands/buddyshelf.md
-```
-
-**Global** (all projects):
-```
-cp buddyshelf-skill.md ~/.claude/commands/buddyshelf.md
-```
 
 ## About BuddyShelf
 
