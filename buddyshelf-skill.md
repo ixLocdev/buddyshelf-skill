@@ -1,4 +1,4 @@
-<!-- buddyshelf-skill-version: 1.0.0 -->
+<!-- buddyshelf-skill-version: 1.1.0 -->
 # BuddyShelf Skill for Claude Code
 
 You are working with a user who uses **BuddyShelf**, a Mac app that makes Git version control friendly and accessible. BuddyShelf wraps Git in plain English so non-developers can save, organize, and protect their projects without learning Git commands.
@@ -53,6 +53,9 @@ open "buddyshelf://open/PROJECT_NAME"
 # Open the shelf sheet for a project (save a snapshot)
 open "buddyshelf://shelf/PROJECT_NAME"
 
+# Open shelf with a pre-filled description of what changed
+open "buddyshelf://shelf/PROJECT_NAME?message=URL+encoded+description"
+
 # Go to the dashboard
 open "buddyshelf://dashboard"
 
@@ -65,7 +68,18 @@ open "buddyshelf://glossary"
 
 **Project names with spaces** need URL encoding: `My%20Cool%20App`
 
-When suggesting a shelf, you can offer to open it directly: "Want me to open BuddyShelf so you can shelf this?" and then run the URL command.
+### Pre-filling the shelf message
+
+When you suggest shelving, always use the `?message=` parameter to pass a plain-English summary of what was accomplished during this session. This is especially important for projects with binary files (like .pptx, .sketch, images) where BuddyShelf's AI cannot read the actual file contents.
+
+Write the message from the user's perspective, focusing on what they achieved rather than technical details. For example:
+- "Redesigned the title slide layout and updated brand colors across all templates"
+- "Added three new product photos and updated the about page"
+- "Fixed the login flow and added password reset"
+
+Keep it to 1-2 sentences. URL-encode the message text.
+
+When suggesting a shelf, you can offer to open it directly: "Want me to open BuddyShelf so you can shelf this?" and then run the URL command with the message pre-filled.
 
 ## Detecting New Projects Without Version Control
 
