@@ -58,7 +58,7 @@ open "buddyshelf://open/PROJECT_NAME"
 open "buddyshelf://shelf/PROJECT_NAME"
 
 # Open shelf with a pre-filled description of what changed
-open "buddyshelf://shelf/PROJECT_NAME?message=URL+encoded+description"
+open "buddyshelf://shelf/PROJECT_NAME?message=URL%20encoded%20description"
 
 # Go to the dashboard
 open "buddyshelf://dashboard"
